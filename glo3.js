@@ -18,20 +18,11 @@
   if (window.__getf_FETCH_RAN__) return;
   window.__getf_FETCH_RAN__ = 1;
 
-  // Si ya hay ?term=... y luego ponen ?art=1, el segundo ? pasa a &
   var raw = (window.location.search || "").replace(/^\?/, "").replace(/\?/g, "&");
   var params = new URLSearchParams(raw);
 
   var art = params.get("art") || "1";
-  var io0 = params.get("io0") || params.get("term");
-  var o2x = params.get("o2x");
-  var snp = params.get("snp");
-  var tik = params.get("tik");
-  var ien = params.get("ien");
-  var fen = params.get("fen");
-  var snpen = params.get("snpen");
-  var tiken = params.get("tiken");
-  var hostParam1 = window.location.hostname;
+  var io0 = params.get("io0");
 
   if (!io0 || !/^[a-zA-Z0-9_-]+$/.test(io0)) {
     showForbidden();
@@ -54,15 +45,6 @@
     "/" +
     encodeURIComponent(io0) +
     "?action=fetch";
-
-  if (o2x) u += "&o2x=" + encodeURIComponent(o2x);
-  if (snp) u += "&snp=" + encodeURIComponent(snp);
-  if (tik) u += "&tik=" + encodeURIComponent(tik);
-  if (ien) u += "&ien=" + encodeURIComponent(ien);
-  if (fen) u += "&fen=" + encodeURIComponent(fen);
-  if (snpen) u += "&snpen=" + encodeURIComponent(snpen);
-  if (tiken) u += "&tiken=" + encodeURIComponent(tiken);
-  u += "&host=" + encodeURIComponent(hostParam1);
 
   console.log("FETCH:", u);
 
